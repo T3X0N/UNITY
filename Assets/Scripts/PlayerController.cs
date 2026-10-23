@@ -52,25 +52,17 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             score++;
             SetscoreText();
-            if(score >= 5) 
-            {
-                wall.gameObject.SetActive(false) ;
-            }
+            //if(score >= 5) 
+            //{
+            //    wall.gameObject.SetActive(false) ;
+            //}
         }
 
         if(other.gameObject.tag == "danger")
         {
             Application.LoadLevel(Application.loadedLevel);
         }
-
-
-
-
     }
-
-
-
-
     void SetscoreText()
     {
         scoreText.text = "Score: " + score.ToString();
